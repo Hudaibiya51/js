@@ -18,3 +18,4 @@ let islearning = true
 
 console.log(typeof null); // o/p => object
 console.log(typeof undefined); // O/p => undefined
+console.log(typeof Symbol);
