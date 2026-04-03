@@ -14,3 +14,4 @@
 
 
 // === is strict check => it checks value as well as datatype
+console.log( "2" === 1)
