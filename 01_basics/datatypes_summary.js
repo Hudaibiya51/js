@@ -37,3 +37,29 @@ const myFunc = function (){
 } // function => function(){} <= function definition
 
 // Js is dynamically typed because the type of the variable is determined at runtime based on its current value
+
+
+
+
+// MEMORY
+
+// 2 types of memories in js 
+// 1, Stack => Used in primitive datatypes (here the copy of orginal data is provided)
+let user1 = "abc"
+let user2 = user1
+user2 = "xyz"
+// console.log(user1); // O/P = abc
+// console.log(user2);// O/P = xyz
+
+
+//  2, Heap => Used in non primitive datatypes(here refrence is provided so access on orginal data is given)
+let u1 = {
+    email: "huda@gmail"
+}
+
+let u2 = u1;
+u2.email = "abc@gmail.com"
+console.log(u1); // O/P =  email: 'abc@gmail.com' 
+console.log(u2); // O/P  email: 'abc@gmail.com'
+
+
