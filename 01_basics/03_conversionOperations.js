@@ -54,10 +54,13 @@ const y = x++;
 
 
 //Prefix increment = the increment operator increments and returns the value after incrementing.
-let z = 3;
-const j = ++z;
-console.log(z);
-console.log(j);
+// let z = 3;
+// const j = ++z;
+// console.log(z);
+// console.log(j);
+
+
+
 
 
 
