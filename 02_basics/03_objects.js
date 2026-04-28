@@ -1,4 +1,4 @@
-// 2 ways to declare an obj 1, luteral 2, constructor
+// 2 ways to declare an obj 1, literal 2, constructor
 // when we declare obj using literal singleton isn't created
 
 
