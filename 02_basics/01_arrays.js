@@ -20,8 +20,7 @@ myArr.unshift(10);
 myArr.shift();
 // console.log(myArr); // unshift n shift adds n deletes the element at the begining
 
-
-// console.log(myArr.includes(4));
+ console.log(myArr.includes(8));
 // console.log(myArr.indexOf(3));
 
 // const newArr = myArr.join()
@@ -35,12 +34,12 @@ myArr.shift();
 // slice and splice
 
 
-console.log("A ", myArr);
-const myn1 = myArr.slice(0,2) // slice is used for extracting a certain part
+// console.log("A ", myArr);
+// const myn1 = myArr.slice(0,2) // slice is used for extracting a certain part
 
-console.log("B ", myArr);
+// console.log("B ", myArr);
 
-const myn2 = myArr.splice(0, 1) // in splice this is what we have : array.splice(start, deleteCount, item1, item2, ...) start → index where changes begin deleteCount → how many elements to remove. item1, item2, ... → (optional) items to add
-console.log("C ", myArr);
+// const myn2 = myArr.splice(0, 1) // in splice this is what we have : array.splice(start, deleteCount, item1, item2, ...) start → index where changes begin deleteCount → how many elements to remove. item1, item2, ... → (optional) items to add
+// console.log("C ", myArr);
 
 

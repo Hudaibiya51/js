@@ -63,3 +63,19 @@ const database = [
 // console.log(tinderobj.hasOwnProperty('isLoggedIn'));
 // console.log(tinderobj.hasOwnProperty('age')); // hasOwnproperty checks whether the particular key is present or not
 
+
+
+// Object de-structure
+
+
+
+const course = {
+    coursename: "JS",
+    courseprice: 999,
+    courseInstructor: "Huda"
+}
+
+
+const {courseInstructor: inst} = course
+console.log(inst);
+
