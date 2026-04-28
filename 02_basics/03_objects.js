@@ -42,6 +42,8 @@ jsuser.greetingstwo = function(){ // adding a func into an obj while accesing on
     console.log(`Hello user, ${this.name}`);
     
 }
-console.log(jsuser.greetings());
-console.log(jsuser.greetingstwo());
+// console.log(jsuser.greetings());
+// console.log(jsuser.greetingstwo());
+console.log(jsuser);
+
 
