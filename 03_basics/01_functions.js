@@ -67,5 +67,55 @@ return
     }
     return `${username} just logged in ` 
 }
-console.log(loginUserMsg());  
+// console.log(loginUserMsg());  
 // here username = "huda" means even if no argumaent will be given, it will use default value otherwise it will get overridden
+
+
+
+// lets create a func where we dont know how many arguments the user will provide so we need to prepare the parameters
+
+// function calculateCartPrice(num1){
+//   return num1
+// }
+// console.log(calculateCartPrice(200,2,3,400)); // here the o/p will be just 200
+// in order to solve it we have ***** rest operator (...) ******
+
+function calculateCartPrice(...num1){
+  return num1
+}
+// console.log(calculateCartPrice(200,2,3,400)); //rest operator will return the array in the output 
+
+
+// how to use objects in funcions
+
+const user = {
+    name: "Huda",
+    bill: 999
+}
+
+function handleObje(anyobj){
+   console.log(`Hello ${anyobj.name}! your bill is: ${anyobj.bill}`);
+}
+
+// handleObje(user)
+
+// the above is the ex of first creating an obj and then passing it as an argument while calling func
+
+handleObje( {
+    name: "Hudaibiya",
+    bill: 89
+}) // this can also be done where we create the object while calling a function
+
+
+
+// how to use arrays in functions
+
+const myArray = ["huda", 26, "pretty", true]
+
+function handleArray(getArray){
+  return getArray[2]
+}
+// console.log(handleArray(myArray));
+// u can create an array while calling a func as well
+console.log(handleArray([200, "huda", "hey"])); 
+
