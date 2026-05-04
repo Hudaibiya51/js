@@ -43,4 +43,21 @@ const chai = () => {
 
 }
 
-chai()
+// chai()
+
+
+() => {} // syntax of arrow function
+
+// const addtwp = (num1, num2) => {
+//     return num1 + num2 // explicit return because we use return keyword
+// } // basic arrow func
+
+// const addtwp = (num1, num2) =>  num1 + num2 // its called implicit return where we dont need {} and return keyword
+
+//  const addtwp = (num1, num2) =>  (num1 + num2) // we can also use () around
+
+ // if we need to use obj
+  const addtwp = (num1, num2) => ({username: "huda", age: 26})
+console.log(addtwp(2,3));
+
+
