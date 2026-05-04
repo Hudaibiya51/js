@@ -3,7 +3,7 @@ const user = {
     price: 999,
     welcomeMsg: function(){
         console.log(`${this.username}, welcome to JS`);
-        console.log(this); // talks about the current context
+        // console.log(this); // talks about the current context
         
         
     }
@@ -18,3 +18,29 @@ const user = {
 // if we run the same thing in browser th o/p is window obj, because window is the global obj in browser
 
 
+// function chai(){
+//     console.log(this); // it prints a lot of details
+    
+// }
+// chai()
+// function chai(){
+//     let username = "ABC"
+//     console.log(this.username); // it prints undefined so that means cannot use this in functions
+    
+// }
+// chai()
+
+// const chai = function(){
+//     let username = "ABC" 
+//  console.log(this.username); // it prints undefined
+ 
+// }
+
+// lets try creating arrow function
+const chai = () => {
+    let username = "ABC" 
+ console.log(this.username); // it prints undefined
+
+}
+
+chai()
