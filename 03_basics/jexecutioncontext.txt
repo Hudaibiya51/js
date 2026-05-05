@@ -1,0 +1,73 @@
+JS Execution Context
+It means when we create a file in js, how is it executed
+JS runs our file in 2 phases: 
+1: Memory Creation Phase (also called Creation Phase) Here what happens we allocate the Memory to the variables whatever we have declared but not executed
+
+2: Execution Phase
+
+Whenever we give our code file to js, it always creates GLOBAL Execution Context which is referred using THIS variable, its diff in browser , node etc
+
+If we run in browser , the value of this is window object
+JS is single threaded
+
+We also have FUNCTION Execution Context 
+and Eval Execution Context(It is basically a property of global object)
+
+Lets understand the Execution by example:
+ let val1 = 3
+ let val2 = 4
+ function addnum(num1, num2){
+    let total =. num1 + num2
+    return total
+ }
+ let result1 = addnum(val1, val2)
+ let result2 = addnum(4,5)
+
+  Steps for the Execution of this program:
+  step1: GLOBAL Execution Context -> THIS
+  step2:     Memory Phase
+    val1 -> undefined
+    val2 -> undefined
+    addnum -> definition
+    result1 -> undefined
+    result2 -> undefined
+    ***** This is the first cycle *******
+    ****** 2nd cycle is Execution Phase ******** 
+
+step3: Execution Phase
+val1 <- 3
+val2 <- 4
+addnum <-  It will have a new Execution Context having (new variable environment + Execution threads)
+        Now for this function addnum we will have the Memory phase n Execution phase
+        1: Memory Phase:
+        val1 -> undefined
+        val2 -> undefined
+        total -> undefined
+        2: Execution Phase: 
+        num1 <- 3
+        num2 <- 4
+        total <- 7
+        Now this total will be returned in global Execution Context 
+        Once the new Execution Context completes its work, it is deleted
+        Now will go back to the step3: Execution phase
+result1 <- 7
+now for result2 we are again calling function so again new Execution Context having (new variable environment + Execution threads) will be created
+         Now for this function addnum we will have the Memory phase n Execution phase
+        1: Memory Phase:
+        val1 -> undefined
+        val2 -> undefined
+        total -> undefined
+        2: Execution Phase: 
+        num1 <- 4
+        num2 <- 5
+        total <- 9
+        Now this total will be returned in global Execution Context 
+        Once the new Execution Context completes its work, it is deleted
+        Now will go back to the step3: Execution phase
+result2 <- 9
+
+
+********** CALL STACK *************
+ In this stack we always have GLOBAL Execution Context and then as per functions come then go to stack once the work is done they leave the stack
+ It follos LIFO method
+ 
